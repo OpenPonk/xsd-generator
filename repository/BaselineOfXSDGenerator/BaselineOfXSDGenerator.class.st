@@ -21,6 +21,8 @@ BaselineOfXSDGenerator >> baseline: spec [
 			spec
 				baseline: 'UMLBootstrapGenerator'
 				with: [ spec repository: 'github://OpenPonk/uml-bootstrap-generator/repository' ].
-			spec package: 'XSD-Metamodel-Generator' with: [ spec requires: #('XMLParser') ].
+			spec
+				package: 'XSD-Metamodel-Generator'
+				with: [ spec requires: #('OPUMLXMI' 'ChangesBuilder' 'UMLMetamodel' 'UMLBootstrapGenerator') ].
 			spec group: 'default' with: #('XSD-Metamodel-Generator') ]
 ]
